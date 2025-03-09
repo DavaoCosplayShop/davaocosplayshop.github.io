@@ -41,7 +41,7 @@ function displayCostumes(costumes) {
         costumeCard.classList.add("costume-card");
 
         costumeCard.innerHTML = `
-            <img src="${costume.costumeIMGBase64}" alt="Costume Image" style="width:290px; border: 1px solid; border-radius: 15px">
+            <img src="${costume.costumeIMGBase64}" alt="Costume Image" style="width:280px; border: 1px solid; border-radius: 15px">
             <h2>${costume.costumeName}</h2>
             <h3><b>Origin</b>: ${costume.costumeOrigin}</h3>
             <p><b>Price</b>: ₱${costume.costumePrice}</p>
@@ -54,7 +54,7 @@ function displayCostumes(costumes) {
             </h3>
         `;
 
-        costumeCard.style.width = "300px";
+        costumeCard.style.width = "285px";
         costumeCard.style.height = "550px";
         costumeCard.style.fontSize = "0.75em";
         costumeCard.style.marginLeft = "1px";
@@ -76,5 +76,82 @@ function searchCostumes() { // search by name or origin
     displayCostumes(filteredCostumes);
 }
 
-document.getElementById("searchBar").addEventListener("input", searchCostumes);
+function filterCostumes() {
+    // Get search query
+    const searchInput = document.getElementById("searchBar").value.toLowerCase();
+
+    // Get checkbox values
+    let maleCheck = document.getElementById("maleCheckBox").checked;
+    let femaleCheck = document.getElementById("femaleCheckBox").checked;
+    
+    let clothCheck = document.getElementById("clothCheckBox").checked;
+    let armorCheck = document.getElementById("armorCheckBox").checked;
+    let nationalCheck = document.getElementById("nationalCheckBox").checked;
+
+    let kidsSize = document.getElementById("kidsCheckBox").checked;
+    let smallSize = document.getElementById("smallCheckBox").checked;
+    let mediumSize = document.getElementById("mediumCheckBox").checked;
+    let largeSize = document.getElementById("largeCheckBox").checked;
+
+    let availableCheck = document.getElementById("availableCheckBox").checked;
+    let unavailableCheck = document.getElementById("unavailableCheckBox").checked;
+
+    let selectedSizes = [];
+    if (kidsSize) selectedSizes.push("KIDS");
+    if (smallSize) selectedSizes.push("SMALL");
+    if (mediumSize) selectedSizes.push("MEDIUM");
+    if (largeSize) selectedSizes.push("LARGE");
+
+    let filteredCostumes = allCostumes.filter(costume => {
+        if (maleCheck && costume.costumeGender !== "Male") return false;
+        if (femaleCheck && costume.costumeGender !== "Female") return false;
+
+        if (clothCheck && costume.costumeType !== "Cloth") return false;
+        if (armorCheck && costume.costumeType !== "Armor") return false;
+        if (nationalCheck && costume.costumeType !== "National Costume") return false;
+
+        // if (
+        //     (kidsSize && !costume.costumeSize.includes("Kids")) &&
+        //     (smallSize && !costume.costumeSize.includes("Small")) &&
+        //     (mediumSize && !costume.costumeSize.includes("Medium")) &&
+        //     (largeSize && !costume.costumeSize.includes("Large"))
+        // ) return false;
+
+        if (selectedSizes.length > 0) {
+            let sizeMatch = selectedSizes.some(size => costume.costumeSize.includes(size) || costume.costumeSize.includes('SIZES'));
+            if (!sizeMatch) return false;
+        }
+
+        if (availableCheck && !costume.costumeAvailable) return false;
+        if (unavailableCheck && costume.costumeAvailable) return false;
+
+        if (
+            searchInput &&
+            !costume.costumeName.toLowerCase().includes(searchInput) &&
+            !costume.costumeOrigin.toLowerCase().includes(searchInput)
+        ) return false;
+
+        return true;
+    });
+
+    displayCostumes(filteredCostumes);
+}
+
+
+// filter // costumes bar 1400x80.81
+const filterBar = document.getElementById('filterBar');
+const filterArrow = document.getElementById('filterArrow');
+const filterCheckBoxes = document.getElementById('filterCheckBoxes');
+
+filterBar.onclick = function() {
+    filterCheckBoxes.classList.toggle("expanded");
+    filterArrow.style.transform = filterCheckBoxes.classList.contains("expanded") ? "rotate(90deg)" : "rotate(0deg)";
+    filterCheckBoxes.style.opacity = filterCheckBoxes.classList.contains("expanded") ? "1" : "0";
+    filterCheckBoxes.style.maxHeight = filterCheckBoxes.classList.contains("expanded") ? "300px" : "0px";
+};
+
+document.querySelectorAll("#filterCheckBoxes input[type=checkbox]").forEach(checkbox => {
+    checkbox.addEventListener("change", filterCostumes);
+});
+document.getElementById("searchBar").addEventListener("input", filterCostumes);
 fetchCostumes();

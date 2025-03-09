@@ -22,39 +22,61 @@
             </div>
         </div>
     </section>
-    <section class = "mainContent">
-        <div id = "costumes">
-            <div id = "costumesBar">
+    <section class="mainContent">
+        <div id="costumes">
+            <div id="costumesBar">
                 <h1>Costumes</h1>
-                <div id = "bars">
-                    <label for = "searchBar">Search</label>
-                    <input name = "searchBar" id = "searchBar" type = "text">
-                    <label for = "sortBar">Sort by</label>
-                    <select name = "sortBar" id = "sortBar">
-                        <option value = "sortName">Name</option>
-                        <option value = "sortPrice">Price</option>
-                        <option value = "sortSize">Size</option>
-                        <option value = "sortType">Type</option>
+                <div id="bars">
+                    <label for="searchBar">Search:</label>
+                    <input name="searchBar" id="searchBar" type="text" placeholder="Search costumes...">
+                    <label for="sortBar">Sort by:</label>
+                    <select name="sortBar" id="sortBar">
+                        <option value="sortName">Name</option>
+                        <option value="sortPrice">Price</option>
+                        <option value="sortSize">Size</option>
+                        <option value="sortType">Type</option>
                     </select>
-                    <label for = "filterBar">Filter</label>
-                    <select name = "filterBar" id = "filterBar">
-                        <option value = "filterMale">Male Costumes</option>
-                        <option value = "filterFemale">Female Costumes</option>
-                        <option value = "filterKids">Kids Costumes</option>
-                        <option value = "filterNational">National Costumes</option>
-                        <option value = "filterHalloween">Halloween Costumes</option>
-                        <option value = "filterDisneyBook">Disney / Book Fair Costumes</option>
-                        <option value = "filterMovies">Movie Costumes</option>
-                    </select>
+                    <button id="filterBar">Filter            <img src = "media/arrow.png" id = "filterArrow"></button>
+                    </div>
                 </div>
+                <div id = "filterCheckBoxes">
+                    <div id = "genderCheckBoxes"><h4>Gender</h4>
+                        <label for = "maleCheckBox">Male</label>
+                        <input type = "checkbox" id = "maleCheckBox" name = "maleCheckBox" class = "filterCheckBox">
+                        <label for = "femaleCheckBox">Female</label>
+                        <input type = "checkbox" id = "femaleCheckBox" name = "femaleCheckBox" class = "filterCheckBox">                         
+                    </div>
+                    <div id = "typeCheckBoxes"><h4>Type</h4>
+                        <label for = "clothCheckBox">Cloth</label>
+                        <input type = "checkbox" id = "clothCheckBox" name = "clothCheckBox" class = "filterCheckBox">
+                        <label for = "armorCheckBox">Armor</label>
+                        <input type = "checkbox" id = "armorCheckBox" name = "armorCheckBox" class = "filterCheckBox">
+                        <label for = "nationalCheckBox">National Costume</label>
+                        <input type = "checkbox" id = "nationalCheckBox" name = "nationalCheckBox" class = "filterCheckBox">
+                    </div>
+                    <div id = "sizesCheckBoxes"><h4>Sizes</h4>
+                        <label for = "kidsCheckBox">Kids</label>
+                        <input type = "checkbox" id = "kidsCheckBox" name = "kidsCheckBox" class = "filterCheckBox">
+                        <label for = "smallCheckBox">Small</label>
+                        <input type = "checkbox" id = "smallCheckBox" name = "smallCheckBox" class = "filterCheckBox">
+                        <label for = "mediumCheckBox">Medium</label>
+                        <input type = "checkbox" id = "mediumCheckBox" name = "mediumCheckBox" class = "filterCheckBox">
+                        <label for = "largeCheckBox">Large</label>
+                        <input type = "checkbox" id = "largeCheckBox" name = "largeCheckBox" class = "filterCheckBox">
+                    </div>
+                    <div id = "availableCheckBoxes"><h4>Availability</h4>
+                        <label for = "availableCheckBox">Available</label>
+                        <input type = "checkbox" id = "availableCheckBox" name = "availableCheckBox" class = "filterCheckBox">
+                        <label for = "unavailableCheckBox">Not Available</label>
+                        <input type = "checkbox" id = "unavailableCheckBox" name = "unavailableCheckBox" class = "filterCheckBox">
+                    </div>
             </div>
-            <!-- insert costumes -->
-            <div id = "costumeList"> 
-
-            </div>
-            <!--  -->
+    
+            <!-- Costumes will be inserted here -->
+            <div id="costumeList"></div>
         </div>
     </section>
+    
     <section class = "footer">
         <div id = "footer">
             <div id = "leftFooter">

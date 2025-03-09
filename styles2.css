@@ -61,12 +61,64 @@ body, head {
 
 #costumesBar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.expanded {
+    max-height: 300px; /* Adjust based on content */
+    opacity: 1;
+}
+
+#filterCheckBoxes {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    
+    display: flex;
     flex-direction: row;
+
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#genderCheckBoxes, #typeCheckBoxes, #sizesCheckBoxes, #availableCheckBoxes {
+    user-select: none;
 }
 
 #bars {
-    margin: 22px;   
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+#searchBar {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#sortBar {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#filterBar {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 75px;
+}
+
+#filterArrow {
+    width: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 #costumeList {
@@ -74,7 +126,9 @@ body, head {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 15px;
+    gap: 15px;
 }
+
 
 #inclusions {
     width: 275px;
@@ -96,7 +150,7 @@ body, head {
     color:aliceblue;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
 }
 
