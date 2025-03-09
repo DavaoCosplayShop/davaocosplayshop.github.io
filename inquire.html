@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davao Cosplay Shop Costume Rentals</title>
+    <link rel = "stylesheet" href = "styles3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class = "header">
+        <div id = "header">
+            <img src = "media/dcsLogo.jpg" alt = "Davao Cosplay Shop" id = "dcsLogo">
+            <h1 id = "leftHeader">Davao Cosplay Shop!</h1>
+            <div id ="rightButtonsHeader">
+                <h2 id = "inquireButtonHeader">Inquire</h2>
+                <h2 id = "costumesButtonHeader">Costumes</h2>
+                <h2 id = "contactsButtonHeader">Contacts</h2>                
+            </div>
+        </div>
+    </section>
+    <section class = "mainContent">
+        <div id = "inquiryForm">
+            <div id = "inquiryDiv">
+                <h2>Inquiry Form</h2>
+                <p>We will try to get in touch as soon as possible.
+                </p>
+                <form action="submit_inquiry.php" method="POST">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+        
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        
+                    <button type="submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <section class = "footer">
+        <div id = "footer">
+            <div id = "leftFooter">
+                <p><b>Davao Cosplay Shop</b></p>
+                <p>0933-291-7769</p>
+                <p>0927-608-2732</p>
+                <p>0922-2926-232</p>
+                <p><b>Araullo Tavera St.Brgy. 9-A, Davao City</b></p>
+                <p><b>Search us thru Google Maps!</b> "Davao Cosplay Shop"</p>
+                <!-- insert fb icon -->
+                <p>&copy; 2025 Davao Cosplay Shop. All Rights Reserved.</p>                 
+            </div>
+            <div id = "rightFooter">
+                <div id = "costumesDivFooter">
+                    <h3>View Costumes</h3>
+                    <p>Women</p>
+                    <p>Men</p>
+                    <p>Kids</p>
+                </div>
+                <div id = "inquireDivFooter">
+                    <h3>Inquire</h3>
+                    <p>MTO</p>
+                    <p>Reservation</p>
+                    <p>Services</p>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+    <script src = "script1.js"></script>  
+    <script src = "homePageScript.js"></script>
+
+</body>
+</html>

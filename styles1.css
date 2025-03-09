@@ -34,6 +34,7 @@ body {
 
 #leftHeader {
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #rightButtonsHeader {
@@ -42,9 +43,10 @@ body {
     margin-left: auto;
 }
 
-#rightButtonHeader {
+#inquireButtonHeader, #costumesButtonHeader, #contactsButtonHeader {
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 /* main content */
@@ -99,12 +101,12 @@ body {
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 
-#randomCostumes {
+#randomCostumes, #genshinCostumes {
     width: 1330px;
     padding: 1px;
 }
 
-#costumeList {
+#costumeList, #costumeList2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

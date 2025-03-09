@@ -1,0 +1,144 @@
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+/* header */
+
+.header {
+    background-color: rgb(207, 120, 131);
+    color:aliceblue;
+}
+
+#dcsLogo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    padding: auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+}
+
+#leftHeader {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#rightButtonsHeader {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+#inquireButtonHeader, #costumesButtonHeader, #contactsButtonHeader {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* main content */
+
+.mainContent {
+    margin-bottom: auto;
+    padding: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#inquiryForm {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: auto; 
+}
+
+#inquiryDiv {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* inquiry form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 96%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgb(207, 120, 131);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(179, 105, 115);
+}
+
+/* footer */
+
+#footer {
+    background-color: rgb(207, 120, 131);
+    color:aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#leftFooter {
+    margin-left: 15px;
+    font-size: 0.80em;
+}
+
+#rightFooter {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    font-size: 0.80em;
+}
+
+#costumesDivFooter, #inquireDivFooter{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+}

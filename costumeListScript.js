@@ -23,7 +23,7 @@ async function fetchCostumes() {
 
     } catch (error) {
         console.error("Fetch Error:", error);
-        costumeContainer.innerHTML = `<p style="color: red; font-size: 1.2em;">${error.message}</p>`;
+        costumeContainer.innerHTML = `<p style="color: red; font-size: 1.2em;">Costumes are unavailable for viewing. Error: ${error.message}</p>`;
     }
 }
 
