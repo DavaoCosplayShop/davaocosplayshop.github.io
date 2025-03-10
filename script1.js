@@ -4,9 +4,15 @@ document.getElementById('leftHeader').onclick = function() {
 document.getElementById("inquireButtonHeader").onclick = function() {
         window.location.href = "inquire.html"
 }
+document.getElementById("footerInquire").onclick = function() {
+    window.location.href = "inquire.html"
+}
 document.getElementById('costumesButtonHeader').onclick = function() {
     window.location.href = "costumes.html"
 }
-document.getElementById('contactsButtonHeader').onclick = function() {
+document.getElementById('footerCostumes').onclick = function() {
     window.location.href = "costumes.html"
+}
+document.getElementById('contactsButtonHeader').onclick = function() {
+    window.location.href = "contacts.html"
 }

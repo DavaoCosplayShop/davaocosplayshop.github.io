@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davao Cosplay Shop Costume Rentals</title>
     <link rel = "stylesheet" href = "styles3.css">
+    <link rel = "stylesheet" href = "globalstyles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,7 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
         
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject (MTO, Reservation, Others)" required>
         
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
@@ -44,6 +45,19 @@
                     <button type="submit">Submit Inquiry</button>
                 </form>
             </div>
+        </div>
+        <div id= "termsAndConditions">
+            <h2>Terms and Conditions</h2>
+            <ul>
+                <li>We do accept reservations for costumes. Customers must pay full or half the price as a reservation fee.</li>
+                <li>If you cancel your reservation after 24 hours, the reservation fee is forfeit. We won't return the reservation fee.</li>
+                <li>It is strictly not allowed to change the costume or refund the payment if the customer has already picked up the item and was declared released from the shop (whether the client has used the costume or not).</li>
+                <li>Customers must fill in a form and must present and surrender <b>1 VALID ORIGINAL government ID</b> upon pickup of costumes.</li>
+                <li>All items have a <b>'deposit fee'</b>. The deposit fee is refundable if the costume has returned with no damage, lost items, or was late.</li>
+                <li>Customers should be liable for any damage to the items and will be charged accordingly.</li>
+                <li>All our items have a limit of <b>(1-day rent only)</b>, meaning we will only give you the costume before the event day.</li>
+                <li>If the items exceed the day of return, we will charge <b>100 pesos</b> on the 'deposit fee' per day.</li>
+            </ul>
         </div>
 
     </section>
@@ -61,23 +75,21 @@
             </div>
             <div id = "rightFooter">
                 <div id = "costumesDivFooter">
-                    <h3>View Costumes</h3>
-                    <p>Women</p>
-                    <p>Men</p>
-                    <p>Kids</p>
+                    <h3 class="footerT"  id="footerCostumes">View Costumes</h3>
+                    <p class="footerP">Women</p>
+                    <p class="footerP">Men</p>
+                    <p class="footerP">Kids</p>
                 </div>
-                <div id = "inquireDivFooter">
-                    <h3>Inquire</h3>
-                    <p>MTO</p>
-                    <p>Reservation</p>
-                    <p>Services</p>
+                <div id="inquireDivFooter">
+                    <h3 class="footerT" id="footerInquire">Inquire</h3>
+                    <p class="footerP">MTO</p>
+                    <p class="footerP">Reservation</p>
+                    <p class="footerP">Services</p>
                 </div>
             </div>
         </div>
             
     </section>
     <script src = "script1.js"></script>  
-    <script src = "homePageScript.js"></script>
-
 </body>
 </html>

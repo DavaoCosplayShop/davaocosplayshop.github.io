@@ -37,17 +37,17 @@ async function fetchCostumes() {
         });
 
         const genshinCostumes = costumes.filter(costume => costume.costumeOrigin === "Genshin Impact");
-        shuffleArray(genshinCostumes); 
-
-        genshinCostumes.forEach(costume => {
+        shuffleArray(genshinCostumes);
+        const selectedGenshinCostumes = genshinCostumes.slice(0, 5); // Limit to 5
+        selectedGenshinCostumes.forEach(costume => {
             const costumeCard = createCostumeCard(costume);
             costumeContainer2.appendChild(costumeCard);
         });
         
         const kidsCostumes = costumes.filter(costume => costume.costumeSize === "KIDS");
-        shuffleArray(kidsCostumes); 
-
-        kidsCostumes.forEach(costume => {
+        shuffleArray(kidsCostumes);
+        const selectedKidsCostumes = kidsCostumes.slice(0, 5); // Limit to 5
+        selectedKidsCostumes.forEach(costume => {
             const costumeCard = createCostumeCard(costume);
             costumeContainer3.appendChild(costumeCard);
         });
@@ -55,6 +55,8 @@ async function fetchCostumes() {
     } catch (error) {
         console.error("Fetch Error:", error);
         costumeContainer.innerHTML = `<p style="color: red; font-size: 1.2em;">Costumes are unavailable for viewing. Error: ${error.message}</p>`;
+        costumeContainer2.innerHTML = `<p style="color: red; font-size: 1.2em;">Costumes are unavailable for viewing. Error: ${error.message}</p>`;
+        costumeContainer3.innerHTML = `<p style="color: red; font-size: 1.2em;">Costumes are unavailable for viewing. Error: ${error.message}</p>`;
     }
 }
 
