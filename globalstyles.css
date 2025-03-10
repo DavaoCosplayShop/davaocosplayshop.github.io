@@ -1,8 +1,8 @@
-#inquireButtonHeader, #costumesButtonHeader, #contactsButtonHeader, .footerP, .footerT {
+#leftHeader #inquireButtonHeader, #costumesButtonHeader, #contactsButtonHeader, .footerP, .footerT {
     transition: text-shadow 0.3s ease-in-out;
 }
 
-#inquireButtonHeader:hover, #costumesButtonHeader:hover, #contactsButtonHeader:hover, .footerP:hover, .footerT:hover  {
+#leftHeader:hover #inquireButtonHeader:hover, #costumesButtonHeader:hover, #contactsButtonHeader:hover, .footerP:hover, .footerT:hover  {
     text-shadow: 0px 0px 5px white;
     cursor: pointer;
 }
